@@ -63,36 +63,13 @@ function Loader({ isLoading, setIsLoading }: LoaderProps) {
               </linearGradient>
             </defs>
             <g>
-              {/* Letter L */}
-              <motion.rect
-                x="15"
-                y="15"
-                width="20"
-                height="70"
-                fill="url(#grad1)"
-                stroke="#8892AF"
-                strokeWidth="2"
-                variants={svgVariants}
-                custom={1}
-              />
-              <motion.rect
-                x="15"
-                y="65"
-                width="50"
-                height="20"
-                fill="url(#grad1)"
-                stroke="#8892AF"
-                strokeWidth="2"
-                variants={svgVariants}
-                custom={1.5}
-              />
-
-              {/* Letter K */}
+              {/* Letter G */}
               <motion.path
-                d="M 65 15 L 65 55 L 45 35 L 65 15 L 85 15 L 65 55 L 85 95 L 65 95 L 65 55"
-                fill="url(#grad1)"
-                stroke="#8892AF"
-                strokeWidth="2"
+                d="M 70 35 A 25 25 0 1 0 70 65 L 70 50 L 55 50"
+                fill="none"
+                stroke="url(#grad1)"
+                strokeWidth="8"
+                strokeLinecap="round"
                 variants={pathVariants as Variants}
               />
 

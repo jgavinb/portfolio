@@ -5,7 +5,7 @@ const nextConfig = {
 
   // Optimize images
   images: {
-    unoptimized: false,
+    unoptimized: true, // Required for static export
     domains: ['localhost'],
     // Optimize image loading
     minimumCacheTTL: 60,
@@ -107,9 +107,6 @@ const nextConfig = {
 
   // Compress responses
   compress: true,
-
-  // Increase build output details
-  output: 'standalone',
 
   // Disable powered by header
   poweredByHeader: false,

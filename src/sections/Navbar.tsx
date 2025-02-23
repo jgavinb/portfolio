@@ -62,8 +62,20 @@ function Navbar() {
             ease: 'easeInOut',
           }}
         >
-          <Link href="">
-            <Logo />
+          <Link href="/">
+            <motion.div
+              className="logo"
+              animate={{
+                rotate: [0, 5, 0, -5, 0], // Gentle rocking animation
+              }}
+              transition={{
+                duration: 4,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
+            >
+              <Logo animate={false} width="100%" height="100%" />
+            </motion.div>
           </Link>
         </motion.div>
         <motion.div
@@ -139,6 +151,8 @@ function Navbar() {
             <Button
               text="Resume"
               link="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </motion.div>
         </motion.div>

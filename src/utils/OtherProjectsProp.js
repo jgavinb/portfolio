@@ -9,16 +9,16 @@ const repositories = [
     homepage: 'https://github.com/jgavinb/gb-resume-assistant',
     updated_at: '2025-22-02T00:00:00Z',
   },
-  {
-    id: 2,
-    name: 'FlaskPost',
-    description:
-      'FlaskPost is a user-friendly web app for sending personalized mass emails, built with FastAPI.',
-    language: ['FastAPI', 'FastMail', 'Jinja2', 'REST API'],
-    html_url: 'https://github.com/lohitkolluri/FlaskPost',
-    homepage: 'https://flask-post.vercel.app/',
-    updated_at: '2023-02-01T00:00:00Z',
-  },
+  //{
+    //id: 2,
+    //name: 'FlaskPost',
+    //description:
+      //'FlaskPost is a user-friendly web app for sending personalized mass emails, built with FastAPI.',
+    //language: ['FastAPI', 'FastMail', 'Jinja2', 'REST API'],
+    //html_url: 'https://github.com/lohitkolluri/FlaskPost',
+    //homepage: 'https://flask-post.vercel.app/',
+    //updated_at: '2023-02-01T00:00:00Z',
+  //},
   //{
     //id: 3,
     //name: 'CompileVortex',
