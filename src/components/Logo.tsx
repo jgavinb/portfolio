@@ -30,7 +30,7 @@ function Logo({ animate = true, width = "50", height = "50" }: LogoProps) {
       width={width}
       height={height}
     >
-      <title>G</title>
+      <title>GB</title>
       <defs>
         <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: '#8892AF', stopOpacity: 1 }} />
