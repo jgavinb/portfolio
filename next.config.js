@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
 
   // Optimize images
@@ -12,6 +13,8 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
   },
+  basePath: '',
+  assetPrefix: '',
 
   // Enable compiler optimizations
   compiler: {

@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "optimize-images": "next-image-export-optimizer",
-    "deploy": "next build && gh-pages -d .next -u \"GitHub Actions <actions@github.com>"
+    "optimize-images": "next-image-export-optimizer"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
