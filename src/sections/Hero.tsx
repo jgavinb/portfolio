@@ -48,7 +48,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.0 }}
         >
-          I craft actionable insights to drive innovation.
+          I turn data into decisions.
         </motion.h3>
         <motion.p
           className="hero-text"
@@ -56,7 +56,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.2 }}
         >
-          I&apos;m a data scientist focused on deriving actionable insights from complex datasets. My interests include machine learning, predictive analytics, and AI-driven solutions.
+          I&apos;m an analytics professional driven by solving complex problems through data. I specialize in transforming raw datasets into actionable insights that empower organizations to act with clarity. Currently, I&apos;m sharpening my expertise in statistical theory and application as a graduate student in NC State’s Master of Science in Analytics program.
         </motion.p>
         <motion.div
           className="hero-button"
@@ -65,9 +65,9 @@ function Hero() {
           transition={{ duration: 0.4, ease: 'easeInOut', delay: 1.4 }}
         >
           <Button
-            text="Check out my LinkedIn"
-            link="https://linkedin.com/in/gavinbrumfield"
-            aria-label="LinkedIn profile of Gavin Brumfield"
+            text="Check out my chatbot!"
+            link="https://gavchat.streamlit.app/"
+            aria-label="Chatbot link"
           />
         </motion.div>
       </motion.div>

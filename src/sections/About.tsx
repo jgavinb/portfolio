@@ -31,8 +31,17 @@ function About() {
   };
 
   const desktopText = {
-    intro:
-      'Hello! I am Gavin Brumfield, a Master of Analytics student at North Carolina State University, passionate about predictive modeling, artificial intelligence, and machine learning. I am looking to join a company that values innovation, collaboration, and continuous learning and am confident that my enthusiasm and drive will help me succeed in any role that leverages my passion for technology.',
+    intro: (
+      <>
+        <p>
+          My journey into analytics began with a fascination for problem-solving. Early on, I thrived in environments that demanded diagnostic thinking—whether troubleshooting systems or optimizing processes. Over time, I realized data analysis mirrored this mindset: both require curiosity, rigor, and the ability to turn ambiguity into actionable strategy.
+        </p>
+
+        <p>
+          Beyond technical skills, I'm passionate about bridging the gap between data and decision-making. As a graduate student, I&apos;m deepening my expertise in statistical theory and modeling while advocating for data literacy as a universal business competency. When I&apos;m not fine-tuning algorithms or building dashboards, you&apos;ll find me exploring new ways to make analytics accessible, because every dataset holds a story—and I&apos;m here to help organizations write the next chapter.
+        </p>
+      </>
+    ),
   };
 
   return (

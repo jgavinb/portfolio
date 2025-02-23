@@ -16,7 +16,7 @@ function Experience() {
   const experiences = [
     {
       name: 'Artemis Health',
-      role: 'Practicum | Data Scientist, Communications Lead',
+      role: 'Practicum - Data Scientist',
       url: 'https://www.artemishealth.com/',
       start: 'September 2024',
       end: 'Current',
