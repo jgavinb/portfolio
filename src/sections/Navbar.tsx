@@ -66,12 +66,14 @@ function Navbar() {
             <motion.div
               className="logo"
               animate={{
-                rotate: [0, 5, 0, -5, 0], // Gentle rocking animation
+                scale: [1, 1.1, 1],
+                rotate: [0, 360],
               }}
               transition={{
-                duration: 4,
+                duration: 6,
                 ease: "easeInOut",
                 repeat: Infinity,
+                times: [0, 0.5, 1]
               }}
             >
               <Logo animate={false} width="100%" height="100%" />
