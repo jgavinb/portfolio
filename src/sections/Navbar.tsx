@@ -66,14 +66,19 @@ function Navbar() {
             <motion.div
               className="logo"
               animate={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 360],
+                y: [-3, 3],
+                rotate: [-5, 5],
+                scale: [0.95, 1.05]
               }}
               transition={{
-                duration: 6,
+                duration: 3,
                 ease: "easeInOut",
                 repeat: Infinity,
-                times: [0, 0.5, 1]
+                repeatType: "reverse"
+              }}
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.3 }
               }}
             >
               <Logo animate={false} width="100%" height="100%" />
