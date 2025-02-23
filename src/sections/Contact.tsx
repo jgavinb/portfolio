@@ -52,17 +52,19 @@ const Contact = () => {
           reply_to: formData.email,
           message: formData.message,
           to_name: 'Gavin Brumfield',
+          to_email: 'jgbrumfi@gmail.com',  // Add your email address here directly
         },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       setStatus({ submitting: false, submitted: true, error: null });
       setFormData({ name: '', email: '', message: '' });
     } catch (error: any) {
-      const errorMessage = error.text || 'Failed to send message. Please try again.';
+      console.error('EmailJS Error:', error);
       setStatus({
         submitting: false,
         submitted: false,
-        error: errorMessage,
+        error: 'Failed to send message. Please try again.',
       });
     }
   };
