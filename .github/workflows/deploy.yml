@@ -28,10 +28,15 @@ jobs:
         
       - name: Build
         run: npm run build
+        
+      - name: Copy Files
+        run: |
+          touch ./out/.nojekyll
+          cp ./CNAME ./out/
           
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out
+          folder: out  # Next.js static export directory
           branch: gh-pages
           token: ${{ secrets.GH_TOKEN }}

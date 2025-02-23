@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'export',  // This creates a static build
   reactStrictMode: true,
 
   // Optimize images
