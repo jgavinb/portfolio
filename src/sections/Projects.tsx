@@ -10,7 +10,7 @@ function Projects() {
       projectName: 'Loan Default Prediction API',
       projectLink: "https://github.com/jgavinb/loan-model-fastapi",
       projectDescription:
-        "A REST API for predicting loan default risk using a machine learning model trained with imbalanced data handling techniques. Built with FastAPI, imbalanced-learn, and Joblib.",
+        "A REST API for predicting loan default risk using various machine learning models trained with imbalanced data handling techniques. Built with FastAPI, imbalanced-learn, and Joblib.",
       projectTech: ['Python', 'scikit-learn', 'Imbalanced-learn', 'FastAPI'],
       projectExternalLinks: {
         github: "https://github.com/jgavinb/loan-model-fastapi",
