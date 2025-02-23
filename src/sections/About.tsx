@@ -36,9 +36,7 @@ function About() {
         <p>
           My journey into analytics began with a fascination for problem-solving. Early on, I thrived in environments that demanded diagnostic thinking—whether troubleshooting systems or optimizing processes. Over time, I realized data analysis mirrored this mindset: both require curiosity, rigor, and the ability to turn ambiguity into actionable strategy.
         </p>
-        <p>
-          
-        </p>
+        <p>&nbsp;</p>
         <p>
           Beyond technical skills, I'm passionate about bridging the gap between data and decision-making. As a graduate student, I&apos;m deepening my expertise in statistical theory and modeling while advocating for data literacy as a universal business competency. When I&apos;m not fine-tuning algorithms or building dashboards, you&apos;ll find me exploring new ways to make analytics accessible, because every dataset holds a story—and I&apos;m here to help organizations write the next chapter.
         </p>
