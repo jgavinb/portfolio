@@ -19,14 +19,14 @@ function Projects() {
     },
     {
       image: 'assets/projects/project2.webp',
-      projectName: 'Customer Churn ML Applicaiton',
-      projectLink: "https://github.com/jgavinb/customer-churn-ml",
+      projectName: 'Customer Churn Prediction App',
+      projectLink: "https://mlchurn.streamlit.app",
       projectDescription:
-        "Customer Churn prediction using various ML models. Interactive predictions via Streamlit webapp.",
+        "A Streamlit deployment of a machine learning model for predicting customer churn in a telecom company. The model was trained using various classification algorithms and hyperparameter tuning.",
       projectTech: ['Python', 'scikit-learn', 'Streamlit'],
       projectExternalLinks: {
         github: "https://github.com/jgavinb/customer-churn-ml",
-        externalLink: "https://github.com/jgavinb/customer-churn-ml",
+        externalLink: "https://mlchurn.streamlit.app",
       },
     },
     //{
