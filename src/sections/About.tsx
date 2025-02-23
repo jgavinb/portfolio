@@ -26,8 +26,17 @@ function About() {
   }, [isInView]);
 
   const mobileText = {
-    intro:
-      'Hello! I am Gavin Brumfield, a Master of Analytics student, passionate about Artificial Intelligence and Machine Learning.',
+    intro: (
+      <>
+        <p>
+          Hello! I'm Gavin Brumfield, a Master of Analytics student with a passion for turning complex data into actionable insights. My background in problem-solving and system optimization led me naturally to data analytics and AI.
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          Currently, I'm expanding my expertise in statistical modeling while making analytics more accessible to organizations. I believe every dataset tells a story, and I'm here to help translate that narrative into business value.
+        </p>
+      </>
+    ),
   };
 
   const desktopText = {

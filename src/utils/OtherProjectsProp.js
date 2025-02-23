@@ -4,7 +4,7 @@ const repositories = [
     name: 'Resume Chatbot',
     description:
       'Chatbot developed using Python, GroqAPI, Llama 3, and Streamlit to answer questions about me and my experience.',
-    language: ['Python', 'GroqAPI', 'Llama 3', 'Streamlit'],
+    language: ['Python', 'GroqAPI', 'Streamlit'],
     html_url: 'https://github.com/jgavinb/gb-resume-assistant',
     homepage: 'https://github.com/jgavinb/gb-resume-assistant',
     updated_at: '2025-22-02T00:00:00Z',
