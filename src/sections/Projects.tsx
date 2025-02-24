@@ -10,7 +10,7 @@ function Projects() {
       projectName: 'Loan Default Prediction API',
       projectLink: "https://github.com/jgavinb/loan-model-fastapi",
       projectDescription:
-        "A REST API for predicting loan default risk using various machine learning models trained with imbalanced data handling techniques. Built with FastAPI, imbalanced-learn, and Joblib.",
+        "A REST API for predicting loan default risk using various machine learning models trained with imbalanced data handling techniques.",
       projectTech: ['Python', 'scikit-learn', 'Imbalanced-learn', 'FastAPI'],
       projectExternalLinks: {
         github: "https://github.com/jgavinb/loan-model-fastapi",
@@ -18,29 +18,29 @@ function Projects() {
       },
     },
     {
+      image: 'assets/projects/project3.webp',
+      projectName: 'Resume Chatbot',
+      projectLink: 'https://gavchat.streamlit.app/',
+      projectDescription:
+        'Chatbot developed using Python, GroqAPI, Llama 3, and Streamlit to answer questions about myself and my experience.',
+      projectTech: ['Python', 'GroqAPI', 'Llama 3', 'Streamlit'],
+      projectExternalLinks: {
+        github: 'https://github.com/jgavinb/gb-resume-assistant',
+        externalLink: 'https://gavchat.streamlit.app/',
+      },
+    },
+    {
       image: 'assets/projects/project2.webp',
       projectName: 'Customer Churn Prediction App',
-      projectLink: "https://mlchurn.streamlit.app",
+      projectLink: "https://mlchurn.streamlit.app/",
       projectDescription:
         "A Streamlit deployment of a machine learning model for predicting customer churn in a telecom company. The model was trained using various classification algorithms and hyperparameter tuning.",
       projectTech: ['Python', 'scikit-learn', 'Streamlit'],
       projectExternalLinks: {
         github: "https://github.com/jgavinb/customer-churn-ml",
-        externalLink: "https://mlchurn.streamlit.app",
+        externalLink: "https://mlchurn.streamlit.app/",
       },
     },
-    //{
-      //image: 'assets/projects/project3.webp',
-      //projectName: 'Compile Vortex',
-      //projectLink: 'https://compile-vortex.vercel.app/',
-      //projectDescription:
-        //'A web-based code editor supporting 40+ programming languages with customizable themes and real-time compilation capabilities.',
-      //projectTech: ['React', 'Node.js', 'Judge0 Api', 'Microsoft Azure'],
-      //projectExternalLinks: {
-        //github: 'https://github.com/lohitkolluri/CompileVortex',
-        //externalLink: 'https://compile-vortex.vercel.app/',
-      //},
-    //},
   ];
 
   return (

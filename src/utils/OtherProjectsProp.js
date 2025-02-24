@@ -1,44 +1,44 @@
 const repositories = [
   {
     id: 1,
-    name: 'Resume Chatbot',
+    name: 'Insurance Purchase Prediction',
     description:
-      'Chatbot developed using Python, GroqAPI, Llama 3, and Streamlit to answer questions about me and my experience.',
-    language: ['Python', 'GroqAPI', 'Streamlit'],
-    html_url: 'https://github.com/jgavinb/gb-resume-assistant',
-    homepage: 'https://github.com/jgavinb/gb-resume-assistant',
-    updated_at: '2025-22-02T00:00:00Z',
+      'This project predicts customer purchases of a variable annuity insurance product for a commercial bank using tree-based machine learning models.',
+    language: ['R', 'XGBoost', 'caret'],
+    html_url: 'https://github.com/jgavinb/Banking-Insurance-Purchase-Prediction-Tree-Models/',
+    homepage: 'https://github.com/jgavinb/Banking-Insurance-Purchase-Prediction-Tree-Models/',
+    updated_at: '2025-23-02T00:00:00Z',
   },
-  //{
-    //id: 2,
-    //name: 'FlaskPost',
-    //description:
-      //'FlaskPost is a user-friendly web app for sending personalized mass emails, built with FastAPI.',
-    //language: ['FastAPI', 'FastMail', 'Jinja2', 'REST API'],
-    //html_url: 'https://github.com/lohitkolluri/FlaskPost',
-    //homepage: 'https://flask-post.vercel.app/',
-    //updated_at: '2023-02-01T00:00:00Z',
-  //},
-  //{
-    //id: 3,
-    //name: 'CompileVortex',
-    //description:
-      //'CompileVortex is a web-based code editor supporting over 40 programming languages with customizable themes.',
-    //language: ['React.js', 'TypeScript', 'Axios', 'Tailwind CSS'],
-    //html_url: 'https://github.com/lohitkolluri/CompileVortex',
-    //homepage: 'https://compile-vortex.vercel.app/',
-    //updated_at: '2023-03-01T00:00:00Z',
-  //},
-  //{
-    //id: 4,
-    //name: 'PayloadMaster',
-    //description:
-      //'PayloadMaster is a bash script for creating Metasploit payloads, setting up listeners, and exploiting Windows targets.',
-    //language: ['Bash', 'Metasploit'],
-    //html_url: 'https://github.com/lohitkolluri/PayloadMaster',
-    //homepage: 'https://github.com/lohitkolluri/PayloadMaster',
-    //updated_at: '2023-04-01T00:00:00Z',
-  //},
+  {
+    id: 2,
+    name: 'Insurance Purchase Model Interpretation',
+    description:
+      'This project delivers an interpretable machine learning solution to predict variable annuity purchases for a commercial bank, utilizing PDP/ALE plots.',
+    language: ['R', 'XGBoost', 'IML', 'caret'],
+    html_url: 'https://github.com/jgavinb/Banking-Insurance-Purchase-Model-Interpretation/',
+    homepage: 'https://github.com/jgavinb/Banking-Insurance-Purchase-Model-Interpretation/',
+    updated_at: '2025-23-02T00:00:00Z',
+  },
+  {
+    id: 3,
+    name: 'Portfolio v2',
+    description:
+      'Portfolio website. Yes, this one.',
+    language: ['React', 'Next.js', 'TypeScript', 'SCSS'],
+    html_url: 'https://github.com/jgavinb/portfolio/',
+    homepage: 'https://github.com/jgavinb/portfolio/',
+    updated_at: '2025-23-02T00:00:00Z',
+  },
+  {
+    id: 4,
+    name: 'Portfolio v1',
+    description:
+      'First iteration of my virtual portfolio.',
+    language: ['Python', 'Streamlit'],
+    html_url: 'https://github.com/jgavinb/gb-resume/',
+    homepage: 'https://gavinb.streamlit.app/',
+    updated_at: '2025-23-02T00:00:00Z',
+  },
   //{
     //id: 5,
     //name: 'QuickMark',
