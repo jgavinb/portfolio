@@ -23,7 +23,7 @@ const repositories = [
     id: 3,
     name: 'Portfolio v2',
     description:
-      'Portfolio website. Yes, this one.',
+      "Second iteration of my virtual portfolio. Yes, you're on it.",
     language: ['React', 'Next.js', 'TypeScript', 'SCSS'],
     html_url: 'https://github.com/jgavinb/portfolio/',
     homepage: 'https://github.com/jgavinb/portfolio/',
