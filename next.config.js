@@ -110,6 +110,10 @@ const nextConfig = {
 
   // Disable powered by header
   poweredByHeader: false,
+
+  env: {
+    NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
+  },
 };
 
 module.exports = nextConfig;
