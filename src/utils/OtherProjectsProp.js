@@ -1,7 +1,7 @@
 const repositories = [
   {
     id: 1,
-    name: 'PyTorch Neural Net Rice Classification',
+    name: 'PyTorch Rice Classification',
     description:
       'This project implements a PyTorch neural network for classifying rice varieties. Acheiving a classification accuracy of 98.97% on the test set.',
     language: ['Python', 'PyTorch', 'sklearn'],
