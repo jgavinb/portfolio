@@ -1,6 +1,16 @@
 const repositories = [
   {
     id: 1,
+    name: 'PyTorch Neural Net Rice Classification',
+    description:
+      'This project implements a PyTorch neural network for classifying rice varieties. Acheiving a classification accuracy of 98.97% on the test set.',
+    language: ['Python', 'PyTorch', 'sklearn'],
+    html_url: 'https://github.com/jgavinb/PyTorch-rice-classification/',
+    homepage: 'https://github.com/jgavinb/PyTorch-rice-classification/',
+    updated_at: '2025-01-04T00:00:00Z',
+  },
+  {
+    id: 2,
     name: 'Insurance Purchase Prediction',
     description:
       'This project predicts customer purchases of a variable annuity insurance product for a commercial bank using tree-based machine learning models.',
@@ -10,7 +20,7 @@ const repositories = [
     updated_at: '2025-23-02T00:00:00Z',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Insurance Purchase Model Interpretation',
     description:
       'This project delivers an interpretable machine learning solution to predict variable annuity purchases for a commercial bank, utilizing PDP/ALE plots.',
@@ -20,7 +30,7 @@ const repositories = [
     updated_at: '2025-23-02T00:00:00Z',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Portfolio v2',
     description:
       "Second iteration of my virtual portfolio. Yes, you're on it.",
@@ -30,7 +40,7 @@ const repositories = [
     updated_at: '2025-23-02T00:00:00Z',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Portfolio v1',
     description:
       'First iteration of my virtual portfolio.',
