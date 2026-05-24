@@ -1,39 +1,45 @@
 .email {
   position: fixed;
   bottom: 0;
-  right: 4rem;
+  right: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
   &-link {
     writing-mode: vertical-rl;
     text-decoration: none;
-    color: var(--light-slate);
-    font-family: var(--fira-code);
-    font-size: var(--tsm2);
-    letter-spacing: 0.1rem;
-    margin-bottom: 20px;
-    outline: 2px dashed transparent;
-    padding: 10px;
-    transition: 0.3s ease-in-out;
+    color: var(--ink-3);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+    padding: 8px;
+    transition: color 0.2s ease;
+
     &:hover {
-      color: var(--theme-color);
+      color: var(--ink);
     }
+
     &:focus {
-      outline-color: var(--theme-color);
+      outline: none;
+      color: var(--ink);
     }
   }
+
   &::after {
-    content: "";
+    content: '';
     display: block;
-    width: 2px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: var(--light-slate);
+    width: 1px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: var(--ink-4);
   }
+
   @media screen and (max-width: 1080px) {
-    right: 2rem;
+    right: 1.5rem;
   }
+
   @media screen and (max-width: 768px) {
     display: none;
   }

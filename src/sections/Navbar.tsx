@@ -63,26 +63,9 @@ function Navbar() {
           }}
         >
           <Link href="/">
-            <motion.div
-              className="logo"
-              animate={{
-                y: [-3, 3],
-                rotate: [-5, 5],
-                scale: [0.95, 1.05]
-              }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-              whileHover={{
-                scale: 1.2,
-                transition: { duration: 0.3 }
-              }}
-            >
+            <div className="logo">
               <Logo animate={false} width="100%" height="100%" />
-            </motion.div>
+            </div>
           </Link>
         </motion.div>
         <motion.div

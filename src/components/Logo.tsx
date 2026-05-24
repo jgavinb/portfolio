@@ -10,13 +10,13 @@ function Logo({ animate = true, width = "50", height = "50" }: LogoProps) {
   const pathVariants = {
     hidden: {
       pathLength: 0,
-      fillOpacity: 0,
+      opacity: 0,
     },
     visible: {
       pathLength: animate ? 0 : 1,
-      fillOpacity: 1,
+      opacity: 1,
       transition: {
-        duration: 2,
+        duration: 1.5,
         ease: "easeInOut",
       },
     },
@@ -31,22 +31,12 @@ function Logo({ animate = true, width = "50", height = "50" }: LogoProps) {
       height={height}
     >
       <title>GB</title>
-      <defs>
-        <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#8892AF', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#CCD6F6', stopOpacity: 1 }} />
-        </linearGradient>
-        <linearGradient id="fillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#0a192f', stopOpacity: 0.5 }} />
-          <stop offset="100%" style={{ stopColor: '#112240', stopOpacity: 0.5 }} />
-        </linearGradient>
-      </defs>
       <g>
         <motion.path
           d="M 70 35 A 25 25 0 1 0 70 65 L 70 50 L 55 50"
-          fill="url(#fillGrad)"
-          stroke="url(#navGrad)"
-          strokeWidth="8"
+          fill="none"
+          stroke="#141414"
+          strokeWidth="7"
           strokeLinecap="round"
           variants={pathVariants}
           initial="hidden"

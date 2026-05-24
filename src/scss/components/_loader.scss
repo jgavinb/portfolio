@@ -1,13 +1,26 @@
 .loader {
-  color: var(--theme-color);
+  background-color: var(--bg);
+  color: var(--ink);
   fill: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  height: 90vh;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
   svg {
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
+
+    path {
+      stroke: var(--ink) !important;
+    }
+
+    circle,
+    polygon {
+      fill: var(--ink) !important;
+      stroke: none;
+    }
   }
 }

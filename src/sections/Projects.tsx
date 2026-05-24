@@ -44,19 +44,19 @@ function Projects() {
   ];
 
   return (
-    <div id="work" className="projects" style={{ paddingTop: '170px' }}>
+    <div id="work" className="projects" style={{ paddingTop: '0' }}>
       <motion.div
         className="title"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         variants={{
-          visible: { opacity: 1, y: -50 },
-          hidden: { opacity: 0, y: 0 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 20 },
         }}
       >
-        <h2>Some Things I&apos;ve Built</h2>
+        <h2>Selected Work</h2>
       </motion.div>
       <div className="projects-container">
         {projectsData.map(
@@ -67,7 +67,7 @@ function Projects() {
             projectExternalLinks,
             projectName,
             projectTech,
-          }) => {
+          }, idx) => {
             return (
               <motion.div
                 className="project"
@@ -75,53 +75,40 @@ function Projects() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 variants={{
-                  visible: { opacity: 1, y: -50 },
-                  hidden: { opacity: 0, y: 0 },
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: 24 },
                 }}
               >
-                <div className="project-image" onClick={() => window.open(projectLink, '_blank')}>
+                <div
+                  className="project-image"
+                  onClick={() => window.open(projectLink, '_blank')}
+                >
                   <div className="project-image-overlay"></div>
                   <div className="project-image-container">
-                    <Image src={image} fill loading="lazy" alt={projectName} quality={100} />
+                    <Image src={image} fill loading="lazy" alt={projectName} quality={90} />
                   </div>
                 </div>
-                <motion.div
-                  className="project-info"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <h3 className="project-info-title">
-                    <span
-                      className="cursor-pointer"
-                      onClick={() => window.open(projectLink, '_blank')}
-                    >
-                      {projectName}
-                    </span>
+                <div className="project-info">
+                  <h3
+                    className="project-info-title"
+                    onClick={() => window.open(projectLink, '_blank')}
+                  >
+                    {projectName}
                   </h3>
                   <div className="project-info-description">
                     <p>{projectDescription}</p>
                   </div>
                   <ul className="project-info-tech-list">
                     {projectTech.map((tech) => (
-                      <motion.li
-                        className="project-info-tech-list-item"
-                        key={tech}
-                        whileHover={{ y: -2, color: 'var(--theme-color)' }}
-                        transition={{ duration: 0.2 }}
-                      >
+                      <li className="project-info-tech-list-item" key={tech}>
                         {tech}
-                      </motion.li>
+                      </li>
                     ))}
                   </ul>
                   <ul className="project-info-links">
-                    <motion.li
-                      className="project-info-links-item"
-                      whileHover={{ y: -2 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    <li className="project-info-links-item">
                       <Link
                         href={projectExternalLinks.github}
                         target="_blank"
@@ -130,12 +117,8 @@ function Projects() {
                       >
                         <Github />
                       </Link>
-                    </motion.li>
-                    <motion.li
-                      className="project-info-links-item"
-                      whileHover={{ y: -2 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    </li>
+                    <li className="project-info-links-item">
                       <Link
                         href={projectExternalLinks.externalLink}
                         target="_blank"
@@ -144,9 +127,9 @@ function Projects() {
                       >
                         <ExternalLink />
                       </Link>
-                    </motion.li>
+                    </li>
                   </ul>
-                </motion.div>
+                </div>
               </motion.div>
             );
           },
