@@ -3,123 +3,57 @@ import Head from 'next/head';
 import { Suspense, useEffect, useState } from 'react';
 import Loader from '../components/Loader';
 
-// Components that are needed immediately
 import Hero from '../sections/Hero';
 import Navbar from '../sections/Navbar';
 
-// Dynamically import components that can be loaded later
-const Email = dynamic(() => import('../components/Email'), {
-  ssr: false,
-});
-
-const SocialIcons = dynamic(() => import('../components/SocialIcons'), {
-  ssr: false,
-});
+const Email = dynamic(() => import('../components/Email'), { ssr: false });
+const SocialIcons = dynamic(() => import('../components/SocialIcons'), { ssr: false });
 
 const About = dynamic(() => import('../sections/About'), {
-  loading: () => <div className="section-loader">Loading...</div>,
+  loading: () => <div className="section-loader" />,
 });
 
 const Experience = dynamic(() => import('../sections/Experience'), {
-  loading: () => <div className="section-loader">Loading...</div>,
+  loading: () => <div className="section-loader" />,
 });
 
 const Projects = dynamic(() => import('../sections/Projects'), {
-  loading: () => <div className="section-loader">Loading...</div>,
+  loading: () => <div className="section-loader" />,
 });
 
-const OtherProjects = dynamic(() => import('@/sections/OtherProjects'), {
-  loading: () => <div className="section-loader">Loading...</div>,
+const Consulting = dynamic(() => import('../sections/Consulting'), {
+  loading: () => <div className="section-loader" />,
 });
 
 const Contact = dynamic(() => import('../sections/Contact'), {
-  loading: () => <div className="section-loader">Loading...</div>,
+  loading: () => <div className="section-loader" />,
 });
 
-const Footer = dynamic(() => import('../sections/Footer'), {
-  ssr: false,
-});
+const Footer = dynamic(() => import('../sections/Footer'), { ssr: false });
 
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const handleLoaderLoaded = () => {
     setIsLoading(false);
     setTimeout(() => setShowContent(true), 450);
   };
 
-  useEffect(() => {
-    // Check if device is mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add resize listener
-    window.addEventListener('resize', checkMobile);
-
-    const links = document.querySelectorAll('nav > .hover-this');
-
-    const animateit = (e: Event) => {
-      if (isMobile) return; // Skip animation on mobile
-
-      const event = e as MouseEvent;
-      const { offsetX: x, offsetY: y } = event,
-        { offsetWidth: width, offsetHeight: height } = event.target as HTMLElement,
-        move = 25,
-        xMove = (x / width) * (move * 2) - move,
-        yMove = (y / height) * (move * 2) - move;
-    };
-
-    const editCursor = (e: Event) => {
-      if (isMobile) return; // Skip cursor update on mobile
-    };
-
-    const handleMouseDown = () => {
-      if (isMobile) return; // Skip click animation on mobile
-    };
-
-    if (!isMobile) {
-      // Only add event listeners on desktop
-      links.forEach((link) => link.addEventListener('mousemove', animateit));
-      links.forEach((link) => link.addEventListener('mouseleave', animateit));
-      window.addEventListener('mousemove', editCursor);
-      window.addEventListener('mousedown', handleMouseDown);
-    }
-
-    // Add fade-in effect
-    const mainContent = document.querySelector('main');
-    if (mainContent) {
-      mainContent.classList.add('fade-in');
-      setTimeout(() => {
-        mainContent.classList.add('show');
-      }, 100);
-    }
-
-    return () => {
-      // Clean up event listeners
-      window.removeEventListener('resize', checkMobile);
-      if (!isMobile) {
-        links.forEach((link) => link.removeEventListener('mousemove', animateit));
-        links.forEach((link) => link.removeEventListener('mouseleave', animateit));
-        window.removeEventListener('mousemove', editCursor);
-        window.removeEventListener('mousedown', handleMouseDown);
-      }
-    };
-  }, [isMobile]);
-
   return (
     <div className="app">
       <Head>
-        <title>Gavin&apos;s Portfolio</title>
-        <meta name="description" content="Gavin's personal portfolio website" />
+        <title>Gavin Brumfield — Data Scientist &amp; AI Consultant</title>
+        <meta
+          name="description"
+          content="Gavin Brumfield is a Data Scientist and AI Consultant based in Austin, TX. Building production AI systems and helping businesses put AI to work."
+        />
         <link rel="canonical" href="https://www.gav-n.dev" />
-        <meta property="og:title" content="Gavin's Portfolio" />
-        <meta property="og:description" content="Gavin's personal portfolio website" />
+        <meta property="og:title" content="Gavin Brumfield — Data Scientist & AI Consultant" />
+        <meta
+          property="og:description"
+          content="Building production AI systems and helping businesses put AI to work."
+        />
         <meta property="og:url" content="https://www.gav-n.dev" />
         <link rel="shortcut icon" href="/icons/favicon.png" />
         <meta
@@ -130,29 +64,29 @@ function Index() {
       {showContent && (
         <>
           <Navbar />
-          <Suspense fallback={<div className="loading-icon">Loading...</div>}>
+          <Suspense fallback={null}>
             <SocialIcons />
             <Email />
           </Suspense>
-          <main style={{ paddingTop: '60px' }} className="fade-in">
+          <main style={{ paddingTop: '60px' }}>
             <Hero />
-            <Suspense fallback={<div className="section-loader">Loading about section...</div>}>
+            <Suspense fallback={<div className="section-loader" />}>
               <About />
             </Suspense>
-            <Suspense
-              fallback={<div className="section-loader">Loading experience section...</div>}
-            >
+            <Suspense fallback={<div className="section-loader" />}>
               <Experience />
             </Suspense>
-            <Suspense fallback={<div className="section-loader">Loading projects section...</div>}>
+            <Suspense fallback={<div className="section-loader" />}>
               <Projects />
-              <OtherProjects />
             </Suspense>
-            <Suspense fallback={<div className="section-loader">Loading contact section...</div>}>
+            <Suspense fallback={<div className="section-loader" />}>
+              <Consulting />
+            </Suspense>
+            <Suspense fallback={<div className="section-loader" />}>
               <Contact />
             </Suspense>
           </main>
-          <Suspense fallback={<div className="footer-loader">Loading footer...</div>}>
+          <Suspense fallback={null}>
             <Footer />
           </Suspense>
         </>

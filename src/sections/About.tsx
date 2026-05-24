@@ -1,71 +1,19 @@
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 
 function About() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add resize listener
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    console.log('Element is in view: ', isInView);
-  }, [isInView]);
-
-  const mobileText = {
-    intro: (
-      <>
-        <p>
-          Hello! I'm Gavin Brumfield, a Master of Analytics student with a passion for turning complex data into actionable insights. My background in problem-solving and system optimization led me naturally to data analytics and AI.
-        </p>
-        <p>&nbsp;</p>
-        <p>
-          Currently, I'm expanding my expertise in statistical modeling while making analytics more accessible to organizations. I believe every dataset tells a story, and I'm here to help translate that narrative into business value.
-        </p>
-      </>
-    ),
-  };
-
-  const desktopText = {
-    intro: (
-      <>
-        <p>
-          My journey into analytics began with a fascination for problem-solving. Early on, I thrived in environments that demanded diagnostic thinking—whether troubleshooting systems or optimizing processes. Over time, I realized data analysis mirrored this mindset: both require curiosity, rigor, and the ability to turn ambiguity into actionable strategy.
-        </p>
-        <p>&nbsp;</p>
-        <p>
-          Beyond technical skills, I'm passionate about bridging the gap between data and decision-making. As a graduate student, I&apos;m deepening my expertise in statistical theory and modeling while advocating for data literacy as a universal business competency. When I&apos;m not fine-tuning algorithms or building dashboards, you&apos;ll find me exploring new ways to make analytics accessible, because every dataset holds a story—and I&apos;m here to help organizations write the next chapter.
-        </p>
-      </>
-    ),
-  };
-
   return (
     <motion.div
       className="about"
       id="about"
-      ref={ref}
-      style={{ paddingTop: isMobile ? '150px' : '250px' }}
+      style={{ paddingTop: '200px' }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       variants={{
-        visible: { opacity: 1, y: -50 },
-        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 20 },
       }}
     >
       <div className="title">
@@ -73,20 +21,28 @@ function About() {
       </div>
       <div className="about-grid">
         <div className="about-grid-info">
-          <p className="about-grid-info-text text-justify">
-            {isMobile ? mobileText.intro : desktopText.intro}
+          <p className="about-grid-info-text">
+            I&apos;m a Data Scientist based in Austin, TX, focused on building AI and data systems
+            that create real operational leverage. At YETI, I design and ship production GenAI
+            agents, experimentation frameworks, and self-service analytics platforms that cut
+            manual work and surface insights at scale.
           </p>
-          <p className="about-grid-info-text text-justify">
-            Here are a few technologies I&apos;ve been working with recently:
+          <p className="about-grid-info-text">
+            Outside of my day-to-day, I consult with organizations at any stage of their AI
+            journey — whether that&apos;s scoping what&apos;s possible, building a first agent,
+            or upskilling a team. I hold an M.S. in Analytics from NC State and care deeply
+            about translating technical work into outcomes people can actually see.
           </p>
-
+          <p className="about-grid-info-text">
+            A few technologies I work with regularly:
+          </p>
           <ul className="about-grid-info-list">
             <li className="about-grid-info-list-item">Python</li>
-            <li className="about-grid-info-list-item">R</li>
             <li className="about-grid-info-list-item">SQL</li>
-            <li className="about-grid-info-list-item">FastAPI</li>
-            <li className="about-grid-info-list-item">AWS</li>
-            <li className="about-grid-info-list-item">Streamlit</li>
+            <li className="about-grid-info-list-item">Vertex AI</li>
+            <li className="about-grid-info-list-item">LangChain</li>
+            <li className="about-grid-info-list-item">BigQuery</li>
+            <li className="about-grid-info-list-item">GCP</li>
           </ul>
         </div>
         <div className="about-grid-photo">
@@ -95,7 +51,7 @@ function About() {
           <div className="about-grid-photo-container">
             <Image
               src="/assets/profile/profile.webp"
-              alt="profile"
+              alt="Gavin Brumfield"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               priority

@@ -6,25 +6,35 @@ function Experience() {
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
-    const transformSelected = () => {
-      const underline = document.querySelector<HTMLElement>('.underline');
-      underline!.style.top = `${selected * 2.5}rem`;
-    };
-    transformSelected();
+    const underline = document.querySelector<HTMLElement>('.underline');
+    if (underline) underline.style.top = `${selected * 2.5}rem`;
   }, [selected]);
 
   const experiences = [
     {
+      name: 'YETI',
+      role: 'Data Scientist II',
+      url: 'https://www.yeti.com/',
+      start: 'July 2025',
+      end: 'Present',
+      shortDescription: [
+        'Designed and deployed a production GenAI lead-generation system for Corporate Sales — web-browsing agents + LLM orchestration integrated with Salesforce for deduplication, reducing manual prospecting time by 320 hours per quarter.',
+        'Built an end-to-end social listening platform ingesting Reddit data into BigQuery/Vertex AI; delivered topic/SKU extraction, sentiment analysis, natural-language self-service querying, and automated alerts.',
+        'Partnered with Marketing, Sales, and Demand Planning as embedded technical advisor; led AI enablement sessions and deployed automated reporting workflows that reduced recurring workload by 40%.',
+        'Executed geo-based incrementality tests measuring causal impact of store layout changes and brand campaigns; translated results into optimized in-store strategies.',
+        'Delivered Marketing Mix Modeling analysis for the Canadian market, quantifying multi-channel ROI and informing 2026 budget allocation.',
+      ],
+    },
+    {
       name: 'Artemis Health',
-      role: 'Practicum - Data Scientist',
+      role: 'Data Scientist Intern',
       url: 'https://www.artemishealth.com/',
       start: 'September 2024',
-      end: 'Current',
+      end: 'March 2025',
       shortDescription: [
-      "Performing data engineering on a billion-row dataset in PostgreSQL, employing SQL optimizations, indexing, and partitioning for faster queries and efficent data handling.",
-      "Developing an ensemble of anomaly detection and unsupervised learning algorithms to identify, categorize, and score data quality issues within third-party vendor datasets.",
-      "Creating comprehensive data quality dashboards in Python, providing real-time, actionable interventions based on root-cause analysis to assist the client's data operations team in improving data quality.",
-      "Collaborating with stakeholders to define the scope of work including key quality indicators, aligning the project with broader data governance objectives and existing company infrastructure.",
+        'Engineered and optimized data pipelines on a 1-billion-row PostgreSQL dataset, reducing query times by 40% and accelerating delivery of client insights.',
+        'Developed ensemble anomaly detection models (unsupervised learning + interrupted time-series) that cut manual data review effort by 50%.',
+        'Built real-time data quality dashboards in Streamlit, empowering client operations teams with self-service visibility.',
       ],
     },
     {
@@ -34,20 +44,19 @@ function Experience() {
       start: 'December 2022',
       end: 'January 2024',
       shortDescription: [
-      "Enhanced CI/CD pipeline efficiency by integrating code-scanning tools and providing guidance to development leads on tool implementation to proactively identify and mitigate security vulnerabilities early in the development process.",
-      "Improved decision-making and security practices by communicating code scan results to stakeholders and development teams, facilitating timely, data-driven actions to address critical findings and reduce potential risks.",
-      "Strengthened legal and privacy standards by implementing a 'Shift left' approach within the Software Development Lifecycle, ensuring compliance with national and international regulations and minimizing compliance-related risks across projects.",
+        'Integrated code-scanning tools into Azure/GitLab CI/CD pipelines, reducing security vulnerabilities by 30% and enabling Shift Left development practices.',
+        'Communicated scan results to stakeholders and development teams, facilitating timely, data-driven remediation of critical findings.',
       ],
     },
     {
       name: 'Syneos Health',
-      role: 'Solution Architect Intern',
+      role: 'Solutions Architect Intern',
       url: 'https://www.syneoshealth.com',
       start: 'May 2022',
       end: 'December 2022',
       shortDescription: [
-      "Increased data accuracy and visibility of project progress by developing and managing PowerBI dashboards with automated data pipelines, providing the Enterprise Architecture team and upper management with real-time metrics on data transfer from the existing Change Management Database to LeanIX.",
-      "Enhanced productivity and efficiency of the Architecture Review Board by creating key performance indicator dashboards with automated data pipelines, enabling Syneos Health to track performance and effectively identify areas for process improvement.",
+        'Designed and deployed automated PowerBI dashboards with data pipelines for the Enterprise Architecture team, increasing Architecture Review Board productivity by 25%.',
+        'Integrated interactive reports into SharePoint via Power Automate, streamlining cross-team collaboration and data access.',
       ],
     },
   ];
@@ -56,14 +65,14 @@ function Experience() {
     <motion.div
       className="experience"
       id="experience"
-      style={{ paddingTop: '250px' }}
+      style={{ paddingTop: '0' }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       variants={{
-        visible: { opacity: 1, y: -50 },
-        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 20 },
       }}
     >
       <div className="title">
@@ -96,7 +105,7 @@ function Experience() {
               </span>
             </h3>
             <p className="exp-details-range">
-              {experiences[selected].start} - {experiences[selected].end}
+              {experiences[selected].start} — {experiences[selected].end}
             </p>
             <ul className="exp-details-list">
               {experiences[selected].shortDescription.map((description, index) => (
