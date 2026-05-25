@@ -17,10 +17,6 @@ const Experience = dynamic(() => import('../sections/Experience'), {
   loading: () => <div className="section-loader" />,
 });
 
-const Projects = dynamic(() => import('../sections/Projects'), {
-  loading: () => <div className="section-loader" />,
-});
-
 const Consulting = dynamic(() => import('../sections/Consulting'), {
   loading: () => <div className="section-loader" />,
 });
@@ -75,9 +71,6 @@ function Index() {
             </Suspense>
             <Suspense fallback={<div className="section-loader" />}>
               <Experience />
-            </Suspense>
-            <Suspense fallback={<div className="section-loader" />}>
-              <Projects />
             </Suspense>
             <Suspense fallback={<div className="section-loader" />}>
               <Consulting />

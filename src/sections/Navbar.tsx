@@ -11,7 +11,6 @@ function Navbar() {
   const sectionLinks = [
     { name: 'About', link: '/#about' },
     { name: 'Experience', link: '/#experience' },
-    { name: 'Work', link: '/#work' },
     { name: 'Consulting', link: '/#consulting' },
     { name: 'Contact', link: '/#contact' },
   ];
