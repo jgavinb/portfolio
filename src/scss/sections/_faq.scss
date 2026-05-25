@@ -1,0 +1,106 @@
+.faq {
+  margin: 8rem auto;
+
+  .title {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--ink-4);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--ink-4);
+  }
+
+  &-item {
+    border-bottom: 1px solid var(--ink-4);
+    overflow: hidden;
+
+    &-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 2rem;
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: var(--bg-alt);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        width: calc(100% + 1.5rem);
+      }
+
+      span:first-child {
+        font-family: var(--serif);
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+        font-weight: 400;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+        line-height: 1.35;
+      }
+    }
+
+    &-toggle {
+      font-family: var(--sans);
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--ink-3);
+      flex-shrink: 0;
+      width: 1.5rem;
+      text-align: center;
+      transition: color 0.2s ease;
+    }
+
+    &-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+
+      p {
+        font-family: var(--sans);
+        font-size: 0.9rem;
+        color: var(--ink-2);
+        line-height: 1.8;
+        padding-bottom: 1.4rem;
+        max-width: 680px;
+      }
+    }
+
+    &-open {
+      .faq-item-toggle {
+        color: var(--accent);
+      }
+
+      .faq-item-answer {
+        max-height: 200px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 5rem auto;
+  }
+}

@@ -27,7 +27,48 @@
     font-size: 0.95rem;
     line-height: 1.8;
     font-family: var(--sans);
+    margin-bottom: 2rem;
+  }
+
+  &-for {
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem;
     margin-bottom: 3rem;
+
+    &-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.75rem;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        font-family: var(--sans);
+        font-size: 0.88rem;
+        color: var(--ink-2);
+        line-height: 1.6;
+        position: relative;
+        padding-left: 1rem;
+
+        &::before {
+          content: '·';
+          position: absolute;
+          left: 0;
+          color: var(--accent);
+          font-size: 1.1rem;
+          line-height: 1.4;
+        }
+      }
+    }
   }
 
   &-grid {
@@ -72,7 +113,16 @@
         font-weight: 400;
         color: var(--ink);
         letter-spacing: -0.01em;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .card-outcome {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-bottom: 0.85rem;
       }
 
       p {

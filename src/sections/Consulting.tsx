@@ -5,34 +5,44 @@ const services = [
   {
     icon: <Bot size={22} />,
     title: 'Custom AI Agents & Automation',
+    outcome: 'Production-deployed in 4–8 weeks',
     description:
       'Design and deploy production-grade AI agents — web-browsing bots, LLM orchestration pipelines, and workflow automation — that replace manual work with reliable, scalable systems.',
   },
   {
     icon: <Lightbulb size={22} />,
     title: 'GenAI Product Consulting',
+    outcome: 'Clear build plan in 2 weeks',
     description:
       'From initial scoping to shipped product: I help teams identify high-leverage AI opportunities, run proofs of concept, and build GenAI-powered features that stick.',
   },
   {
     icon: <BarChart3 size={22} />,
     title: 'Data Strategy & Analytics',
+    outcome: 'Self-service insights from day one',
     description:
       'End-to-end data infrastructure — pipelines, dashboards, and self-service analytics that give your team answers without waiting on a data team.',
   },
   {
     icon: <Users size={22} />,
     title: 'AI Enablement & Training',
+    outcome: 'Your team ships AI confidently',
     description:
       'Practical workshops and hands-on sessions that help individuals and teams move from AI curiosity to confident, daily use — grounded in real tools and real workflows.',
   },
 ];
 
 const steps = [
-  { number: '01', label: 'Discovery' },
-  { number: '02', label: 'Build' },
-  { number: '03', label: 'Deploy' },
-  { number: '04', label: 'Measure' },
+  { number: '01', label: 'Free Strategy Call' },
+  { number: '02', label: 'Scoped Proposal' },
+  { number: '03', label: 'Build & Iterate' },
+  { number: '04', label: 'Deploy & Measure' },
+];
+
+const forItems = [
+  "Small business owners who want to use AI but don't have a technical team to build it",
+  'Operators spending hours on tasks that AI could handle in minutes',
+  'Growing businesses that need data-driven decisions without hiring a full data team',
 ];
 
 function Consulting() {
@@ -59,6 +69,15 @@ function Consulting() {
         budget: advisory, project-based, or ongoing.
       </p>
 
+      <div className="consulting-for">
+        <p className="consulting-for-label">Good fit if you are&hellip;</p>
+        <ul className="consulting-for-list">
+          {forItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+
       <div className="consulting-grid">
         {services.map((service, i) => (
           <motion.div
@@ -71,6 +90,7 @@ function Consulting() {
           >
             <div className="card-icon">{service.icon}</div>
             <h3>{service.title}</h3>
+            <p className="card-outcome">&rarr; {service.outcome}</p>
             <p>{service.description}</p>
           </motion.div>
         ))}
@@ -91,11 +111,11 @@ function Consulting() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn"
-          aria-label="Book a call"
+          aria-label="Book a free 30-minute call"
         >
-          Book a Call
+          Book a Free 30-Min Call
         </a>
-        <p>or email &nbsp;<a href="mailto:jgbrumfi@gmail.com" className="consulting-cta-email">jgbrumfi@gmail.com</a></p>
+        <p>or email&nbsp;<a href="mailto:jgbrumfi@gmail.com" className="consulting-cta-email">jgbrumfi@gmail.com</a></p>
       </div>
     </motion.section>
   );

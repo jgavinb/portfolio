@@ -60,7 +60,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
         >
-          Your unfair advantage in AI.
+          Ship AI that works in production.
         </motion.h2>
 
         <motion.p
@@ -69,8 +69,9 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut', delay: 0.95 }}
         >
-          I build production AI systems at YETI and consult with businesses ready to move from
-          AI curiosity to shipped product. Strategy, build, deploy — end to end.
+          Most AI projects stall between demo and deployment. I help small businesses skip
+          that gap entirely — building agents, automations, and analytics that drive
+          measurable outcomes. Available for select engagements.
         </motion.p>
 
         <motion.div
@@ -79,15 +80,21 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut', delay: 1.1 }}
         >
-          <a
-            href="https://calendly.com/jgbrumfi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-hero-cta"
-            aria-label="Book a call"
-          >
-            Book a Call &rarr;
-          </a>
+          <div className="hero-cta-group">
+            <a
+              href="https://calendly.com/jgbrumfi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-hero-cta"
+              aria-label="Book a free 30-minute call"
+            >
+              Book a Free 30-Min Call &rarr;
+            </a>
+            <span className="hero-availability">
+              <span className="hero-availability-dot" />
+              Accepting new clients
+            </span>
+          </div>
         </motion.div>
 
         <motion.div
