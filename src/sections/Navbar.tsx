@@ -2,14 +2,12 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Button from '../components/Button';
 import Logo from '../components/Logo';
 
 function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
   const sectionLinks = [
-    { name: 'About', link: '/#about' },
     { name: 'Experience', link: '/#experience' },
     { name: 'Consulting', link: '/#consulting' },
     { name: 'Contact', link: '/#contact' },
@@ -135,12 +133,15 @@ function Navbar() {
               delay: 0.6,
             }}
           >
-            <Button
-              text="Resume"
-              link="/resume.pdf"
+            <a
+              href="https://calendly.com/jgbrumfi"
               target="_blank"
               rel="noopener noreferrer"
-            />
+              className="btn btn-book"
+              aria-label="Book a call"
+            >
+              Book a Call
+            </a>
           </motion.div>
         </motion.div>
       </div>

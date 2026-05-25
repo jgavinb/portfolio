@@ -22,3 +22,16 @@
     color: var(--bg);
   }
 }
+
+.btn-book {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: #9d6823;
+    border-color: #9d6823;
+    color: #fff;
+  }
+}

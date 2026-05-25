@@ -41,7 +41,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut', delay: 0.5 }}
         >
-          Data Scientist &amp; AI Consultant
+          AI Consulting &nbsp;&middot;&nbsp; Data Science
         </motion.p>
 
         <motion.h1
@@ -60,7 +60,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
         >
-          I build AI systems that drive measurable outcomes.
+          Your unfair advantage in AI.
         </motion.h2>
 
         <motion.p
@@ -69,8 +69,8 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut', delay: 0.95 }}
         >
-          Currently building production AI and data systems at YETI. I also consult with
-          businesses ready to put AI to work.
+          I build production AI systems at YETI and consult with businesses ready to move from
+          AI curiosity to shipped product. Strategy, build, deploy — end to end.
         </motion.p>
 
         <motion.div
@@ -79,11 +79,14 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut', delay: 1.1 }}
         >
-          <a href="/#work" className="btn" aria-label="See my work">
-            See My Work
-          </a>
-          <a href="/#consulting" className="btn-secondary" aria-label="Work with me">
-            Work With Me →
+          <a
+            href="https://calendly.com/jgbrumfi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-hero-cta"
+            aria-label="Book a call"
+          >
+            Book a Call &rarr;
           </a>
         </motion.div>
 

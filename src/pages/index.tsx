@@ -9,15 +9,11 @@ import Navbar from '../sections/Navbar';
 const Email = dynamic(() => import('../components/Email'), { ssr: false });
 const SocialIcons = dynamic(() => import('../components/SocialIcons'), { ssr: false });
 
-const About = dynamic(() => import('../sections/About'), {
+const Consulting = dynamic(() => import('../sections/Consulting'), {
   loading: () => <div className="section-loader" />,
 });
 
 const Experience = dynamic(() => import('../sections/Experience'), {
-  loading: () => <div className="section-loader" />,
-});
-
-const Consulting = dynamic(() => import('../sections/Consulting'), {
   loading: () => <div className="section-loader" />,
 });
 
@@ -67,13 +63,10 @@ function Index() {
           <main style={{ paddingTop: '60px' }}>
             <Hero />
             <Suspense fallback={<div className="section-loader" />}>
-              <About />
+              <Consulting />
             </Suspense>
             <Suspense fallback={<div className="section-loader" />}>
               <Experience />
-            </Suspense>
-            <Suspense fallback={<div className="section-loader" />}>
-              <Consulting />
             </Suspense>
             <Suspense fallback={<div className="section-loader" />}>
               <Contact />

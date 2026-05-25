@@ -1,5 +1,5 @@
 .consulting {
-  margin: 10rem 0 8rem;
+  margin: 8rem 0 8rem;
 
   .title {
     position: relative;
@@ -162,6 +162,17 @@
       font-size: 0.72rem;
       font-family: var(--mono);
       letter-spacing: 0.08em;
+    }
+
+    &-email {
+      color: var(--ink-3);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      letter-spacing: 0.08em;
+
+      &:hover {
+        color: var(--ink);
+      }
     }
   }
 

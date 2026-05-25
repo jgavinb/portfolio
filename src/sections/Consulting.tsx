@@ -54,9 +54,9 @@ function Consulting() {
       </div>
 
       <p className="consulting-intro">
-        I work with individuals and businesses at every stage — whether you&apos;re trying to
-        understand what AI can do for you, or you&apos;re ready to build. Engagements are
-        scoped to your needs: advisory, project-based, or ongoing.
+        Whether you need a strategic roadmap, a production-ready AI system, or a team that
+        can actually use AI — I&apos;ve done it. Engagements are scoped to your timeline and
+        budget: advisory, project-based, or ongoing.
       </p>
 
       <div className="consulting-grid">
@@ -86,10 +86,16 @@ function Consulting() {
       </div>
 
       <div className="consulting-cta">
-        <a href="mailto:jgbrumfi@gmail.com" className="btn" aria-label="Send me an email">
-          Let&apos;s Talk
+        <a
+          href="https://calendly.com/jgbrumfi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          aria-label="Book a call"
+        >
+          Book a Call
         </a>
-        <p>jgbrumfi@gmail.com</p>
+        <p>or email &nbsp;<a href="mailto:jgbrumfi@gmail.com" className="consulting-cta-email">jgbrumfi@gmail.com</a></p>
       </div>
     </motion.section>
   );
