@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Logo from '../components/Logo';
 
 function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
@@ -18,7 +17,7 @@ function Navbar() {
       window.pageYOffset > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll); // Cleanup listener
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ function Navbar() {
       e.stopPropagation();
     });
     const html = document.querySelector('html');
-    html?.addEventListener('click', (e) => {
+    html?.addEventListener('click', () => {
       setResponsiveNavVisible(false);
     });
   }, []);
@@ -50,28 +49,21 @@ function Navbar() {
       <div className={`wrapper ${navbarVisible ? 'blur-nav' : ''}`}>
         <motion.div
           className="brand"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.5,
-            ease: 'easeInOut',
-          }}
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <Link href="/">
-            <div className="logo">
-              <Logo animate={false} width="100%" height="100%" />
-            </div>
-            <span className="brand-location">Austin, TX</span>
+          <Link href="/" className="brand-wordmark">
+            <span className="brand-name">Gavin Brumfield</span>
+            <span className="brand-sub">AI Consulting&nbsp;&nbsp;·&nbsp;&nbsp;Austin, TX</span>
           </Link>
         </motion.div>
+
         <motion.div
           className="nav-responsive-toggle"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.3,
-            ease: 'easeInOut',
-          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: 'easeOut', delay: 0.3 }}
         >
           {responsiveNavVisible ? (
             <X
@@ -79,7 +71,7 @@ function Navbar() {
                 e.stopPropagation();
                 setResponsiveNavVisible(false);
               }}
-              size={24} // Customize size if needed
+              size={22}
             />
           ) : (
             <Menu
@@ -87,38 +79,32 @@ function Navbar() {
                 e.stopPropagation();
                 setResponsiveNavVisible(true);
               }}
-              size={24} // Customize size if needed
+              size={22}
             />
           )}
         </motion.div>
+
         <motion.div
           className={`${responsiveNavVisible && 'nav-responsive'} nav-items`}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
-          transition={{
-            duration: 0.3,
-            ease: 'easeInOut',
-          }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
+          <div className="nav-mobile-wordmark">
+            <span className="brand-name">Gavin Brumfield</span>
+            <span className="brand-sub">AI Consulting · Austin, TX</span>
+          </div>
           <ul className="nav-items-list">
             {sectionLinks.map(({ name, link }, index) => (
               <motion.li
                 key={name}
                 className="nav-items-list-item"
-                initial={{ opacity: 0, y: -25 }}
+                initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  ease: 'easeInOut',
-                  delay: 0.1 + index * 0.1,
-                }}
+                transition={{ duration: 0.3, ease: 'easeOut', delay: 0.1 + index * 0.08 }}
               >
-                <Link
-                  href={link}
-                  className="nav-items-list-item-link"
-                  aria-label={`Navigate to ${name}`}
-                >
+                <Link href={link} className="nav-items-list-item-link" aria-label={`Navigate to ${name}`}>
                   {name}
                 </Link>
               </motion.li>
@@ -126,19 +112,15 @@ function Navbar() {
           </ul>
           <motion.div
             className="nav-items-button"
-            initial={{ opacity: 0, y: -25 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: 'easeInOut',
-              delay: 0.6,
-            }}
+            transition={{ duration: 0.3, ease: 'easeOut', delay: 0.4 }}
           >
             <a
               href="https://calendly.com/jgbrumfi"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-book"
+              className="btn-nav"
               aria-label="Book a call"
             >
               Book a Call
