@@ -1,8 +1,26 @@
 .about {
   margin: 9rem 0;
 
+  &-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  &-photo {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: var(--bg-alt);
+
+    img {
+      object-position: center 10% !important;
+    }
+  }
+
   &-inner {
-    max-width: 760px;
+    max-width: 600px;
   }
 
   &-eyebrow {
@@ -72,6 +90,18 @@
       color: var(--ink);
       font-weight: 400;
       letter-spacing: -0.01em;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    &-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    &-photo {
+      aspect-ratio: 4 / 3;
+      max-height: 360px;
     }
   }
 

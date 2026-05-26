@@ -30,9 +30,9 @@
 
 .hero {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   z-index: 1;
 
@@ -40,7 +40,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 7rem 4rem 7rem 0;
+    padding: 8rem 0;
+    max-width: 680px;
   }
 
   &-title {
@@ -84,57 +85,15 @@
     margin-top: 2.75rem;
   }
 
-  &-photo {
-    position: relative;
-    align-self: stretch;
-    margin-right: -15rem;
-
-    img {
-      object-position: center 15% !important;
-    }
-
-    // Warm gradient fade on left edge to blend into content
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, var(--hero-bg) 0%, transparent 30%);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    @media screen and (max-width: 1200px) {
-      margin-right: -8rem;
-    }
-
-    @media screen and (max-width: 1020px) {
-      margin-right: -5rem;
-    }
-  }
-
   @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
-
     &-content {
-      padding: 5rem 0 3rem;
-    }
-
-    &-photo {
-      margin-right: -2.5rem;
-      height: 320px;
-      align-self: auto;
-
-      &::after {
-        background: linear-gradient(to bottom, var(--hero-bg) 0%, transparent 25%),
-                    linear-gradient(to right, var(--hero-bg) 0%, transparent 20%);
-      }
+      padding: 6rem 0 5rem;
     }
   }
 
   @media screen and (max-width: 480px) {
-    &-photo {
-      margin-right: -1.5rem;
-      height: 260px;
+    &-content {
+      padding: 5rem 0 4rem;
     }
   }
 }

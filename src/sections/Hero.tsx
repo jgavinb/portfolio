@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 function Hero() {
   return (
@@ -69,23 +68,6 @@ function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="hero-photo"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
-        >
-          <div className="hero-photo-inner">
-            <Image
-              src="/assets/profile/profile.webp"
-              alt="Gavin Brumfield"
-              fill
-              sizes="(max-width: 768px) 280px, 380px"
-              priority
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );
