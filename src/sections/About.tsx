@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 function About() {
   return (
-    <motion.div
+    <motion.section
       className="about"
       id="about"
-      style={{ paddingTop: '200px' }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -16,50 +14,42 @@ function About() {
         hidden: { opacity: 0, y: 20 },
       }}
     >
-      <div className="title">
-        <h2>About Me</h2>
-      </div>
-      <div className="about-grid">
-        <div className="about-grid-info">
-          <p className="about-grid-info-text">
-            I&apos;m a Data Scientist based in Austin, TX, focused on building AI and data systems
-            that create real operational leverage. At YETI, I design and ship production GenAI
-            agents, experimentation frameworks, and self-service analytics platforms that cut
-            manual work and surface insights at scale.
+      <div className="about-inner">
+        <p className="about-eyebrow">Who you're working with</p>
+        <h2 className="about-heading">You work directly with me.</h2>
+        <div className="about-body">
+          <p>
+            I'm a data scientist at YETI in Austin, TX, where I build AI systems that handle
+            thousands of decisions a day — lead generation agents, analytics platforms, and
+            automated workflows used by real teams at scale.
           </p>
-          <p className="about-grid-info-text">
-            Outside of my day-to-day, I consult with organizations at any stage of their AI
-            journey — whether that&apos;s scoping what&apos;s possible, building a first agent,
-            or upskilling a team. I hold an M.S. in Analytics from NC State and care deeply
-            about translating technical work into outcomes people can actually see.
+          <p>
+            I started consulting because I kept seeing small businesses sitting on problems that
+            I could solve in a matter of weeks — the same kinds of problems that take enterprise
+            companies months and large budgets to tackle.
           </p>
-          <p className="about-grid-info-text">
-            A few technologies I work with regularly:
+          <p>
+            When you hire me, you get me. Not an account team, not a junior developer, not a
+            proposal that gets handed off. I scope the project, do the work, and make sure it
+            runs before I hand it over.
           </p>
-          <ul className="about-grid-info-list">
-            <li className="about-grid-info-list-item">Python</li>
-            <li className="about-grid-info-list-item">SQL</li>
-            <li className="about-grid-info-list-item">Vertex AI</li>
-            <li className="about-grid-info-list-item">LangChain</li>
-            <li className="about-grid-info-list-item">BigQuery</li>
-            <li className="about-grid-info-list-item">GCP</li>
-          </ul>
         </div>
-        <div className="about-grid-photo">
-          <div className="overlay"></div>
-          <div className="overlay-border"></div>
-          <div className="about-grid-photo-container">
-            <Image
-              src="/assets/profile/profile.webp"
-              alt="Gavin Brumfield"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
+        <div className="about-details">
+          <div className="about-detail">
+            <span className="about-detail-label">Based in</span>
+            <span className="about-detail-value">Austin, TX</span>
+          </div>
+          <div className="about-detail">
+            <span className="about-detail-label">Works with</span>
+            <span className="about-detail-value">Small businesses, remote-friendly</span>
+          </div>
+          <div className="about-detail">
+            <span className="about-detail-label">Background</span>
+            <span className="about-detail-value">M.S. Analytics, NC State</span>
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
 

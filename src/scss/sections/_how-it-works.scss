@@ -1,0 +1,121 @@
+.how-it-works {
+  margin: 9rem 0;
+
+  .title {
+    position: relative;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--ink-4);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--ink-4);
+  }
+
+  &-step {
+    padding: 2.25rem 2rem;
+    border-right: 1px solid var(--ink-4);
+    transition: background-color 0.2s ease;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: var(--bg-alt);
+    }
+  }
+
+  &-number {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  &-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.85rem;
+    line-height: 1.25;
+  }
+
+  &-body {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    line-height: 1.8;
+  }
+
+  &-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    &-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-step {
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(3) {
+        border-top: 1px solid var(--ink-4);
+        border-right: 1px solid var(--ink-4);
+      }
+
+      &:last-child {
+        border-top: 1px solid var(--ink-4);
+        border-right: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 6rem 0;
+
+    &-grid {
+      grid-template-columns: 1fr;
+    }
+
+    &-step {
+      border-right: none;
+      border-bottom: 1px solid var(--ink-4);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      // override nth-child borders for 1-col
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-right: none;
+        border-top: none;
+      }
+    }
+  }
+}

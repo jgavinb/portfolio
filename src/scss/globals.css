@@ -1,12 +1,13 @@
 :root {
   /* Palette */
-  --bg: #F8F7F3;
-  --bg-alt: #EEECE7;
-  --ink: #141414;
-  --ink-2: #4A4A4A;
-  --ink-3: #9B9693;
-  --ink-4: #DDD9D1;
-  --accent: #B5792A;
+  --bg: #F7F4EE;
+  --bg-alt: #EDE8DF;
+  --ink: #1A1612;
+  --ink-2: #4D4540;
+  --ink-3: #9B9087;
+  --ink-4: #DDD7CE;
+  --accent: #C2643A;
+  --hero-bg: #1C1814;
 
   /* Typography */
   --serif: 'Cormorant Garamond', Georgia, serif;
@@ -89,9 +90,6 @@ html {
 }
 
 .hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 

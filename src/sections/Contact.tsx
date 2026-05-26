@@ -71,10 +71,10 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
     >
       <motion.h2 className="contact-title">Get In Touch</motion.h2>
-      <motion.h2 className="contact-sub-title">Let&apos;s Connect</motion.h2>
+      <motion.h2 className="contact-sub-title">Tell me what&apos;s eating your time.</motion.h2>
       <motion.p className="contact-text">
-        Have a project in mind or just want to talk shop? I&apos;m always happy to connect —
-        whether it&apos;s about data, AI, or something you&apos;re trying to figure out.
+        Describe the problem — even roughly. I&apos;ll tell you honestly whether I can help and
+        what it might look like. No pitch, no commitment. Just a straight answer.
       </motion.p>
 
       <motion.form onSubmit={handleSubmit} className="contact-form">

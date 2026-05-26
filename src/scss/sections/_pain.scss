@@ -1,0 +1,111 @@
+.pain {
+  margin: 9rem 0;
+
+  &-header {
+    margin-bottom: 4rem;
+  }
+
+  &-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  &-heading {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    max-width: 600px;
+  }
+
+  &-grid {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--ink-4);
+  }
+
+  &-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 3rem;
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--ink-4);
+    align-items: start;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: var(--bg-alt);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    &-number {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      font-weight: 300;
+      color: var(--ink-4);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      padding-top: 0.1rem;
+      transition: color 0.15s ease;
+    }
+
+    &:hover &-number {
+      color: var(--accent);
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 0.35rem;
+    }
+
+    &-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    &-body {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--ink-2);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 6rem 0;
+
+    &-card {
+      grid-template-columns: 70px 1fr;
+      gap: 1.5rem;
+      padding: 2.5rem 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &-card {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+
+      &-number {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

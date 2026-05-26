@@ -1,0 +1,141 @@
+.case-study {
+  margin: 9rem 0;
+
+  &-header {
+    margin-bottom: 3rem;
+  }
+
+  &-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  &-heading {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    max-width: 680px;
+  }
+
+  &-card {
+    background: var(--hero-bg);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+
+    &-section {
+      padding: 3rem;
+    }
+
+    &-divider {
+      background: rgba(255, 255, 255, 0.08);
+      align-self: stretch;
+    }
+  }
+
+  &-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  &-text {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: rgba(240, 235, 227, 0.6);
+    line-height: 1.85;
+  }
+
+  &-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--ink-4);
+    border-top: none;
+    margin-bottom: 1.5rem;
+  }
+
+  &-metric {
+    padding: 2rem;
+    border-right: 1px solid var(--ink-4);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &-value {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    &-suffix {
+      font-size: 0.5em;
+      color: var(--accent);
+    }
+
+    &-label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+    }
+  }
+
+  &-disclosure {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+    text-align: right;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 6rem 0;
+
+    &-card {
+      grid-template-columns: 1fr;
+
+      &-divider {
+        height: 1px;
+        width: auto;
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    &-metrics {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &-metrics {
+      grid-template-columns: 1fr;
+    }
+
+    &-metric {
+      border-right: none;
+      border-bottom: 1px solid var(--ink-4);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

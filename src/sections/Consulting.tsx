@@ -1,48 +1,32 @@
 import { motion } from 'framer-motion';
-import { Bot, BarChart3, Lightbulb, Users } from 'lucide-react';
 
 const services = [
   {
-    icon: <Bot size={22} />,
-    title: 'Custom AI Agents & Automation',
-    outcome: 'Production-deployed in 4–8 weeks',
-    description:
-      'Design and deploy production-grade AI agents — web-browsing bots, LLM orchestration pipelines, and workflow automation — that replace manual work with reliable, scalable systems.',
+    title: 'Workflow Automation',
+    outcome: 'Hours back every week',
+    description: "If your team is doing the same tasks repeatedly — data entry, lead follow-up, report generation, customer outreach — I can automate them. You define the rules once; the system runs without anyone babysitting it.",
   },
   {
-    icon: <Lightbulb size={22} />,
-    title: 'GenAI Product Consulting',
-    outcome: 'Clear build plan in 2 weeks',
-    description:
-      'From initial scoping to shipped product: I help teams identify high-leverage AI opportunities, run proofs of concept, and build GenAI-powered features that stick.',
+    title: 'AI Strategy & Planning',
+    outcome: 'A clear plan in 2 weeks',
+    description: "Not sure where AI fits in your business? I will map out the highest-value opportunities for your specific situation and give you a plain-English plan for what to build first — and what to skip.",
   },
   {
-    icon: <BarChart3 size={22} />,
-    title: 'Data Strategy & Analytics',
-    outcome: 'Self-service insights from day one',
-    description:
-      'End-to-end data infrastructure — pipelines, dashboards, and self-service analytics that give your team answers without waiting on a data team.',
+    title: 'Dashboards & Reporting',
+    outcome: 'See what is actually working',
+    description: "Stop running reports by hand or waiting on someone else to pull the numbers. I build custom dashboards that show you exactly what is happening in your business — sales, costs, customers — updated automatically.",
   },
   {
-    icon: <Users size={22} />,
-    title: 'AI Enablement & Training',
-    outcome: 'Your team ships AI confidently',
-    description:
-      'Practical workshops and hands-on sessions that help individuals and teams move from AI curiosity to confident, daily use — grounded in real tools and real workflows.',
+    title: 'Team Training',
+    outcome: 'Your team uses AI confidently',
+    description: "AI tools are only valuable if your people actually use them. I run focused, hands-on sessions built around your specific business — not generic AI hype — so your team walks away with real skills they use the next day.",
   },
-];
-
-const steps = [
-  { number: '01', label: 'Free Strategy Call' },
-  { number: '02', label: 'Scoped Proposal' },
-  { number: '03', label: 'Build & Iterate' },
-  { number: '04', label: 'Deploy & Measure' },
 ];
 
 const forItems = [
-  "Small business owners who want to use AI but don't have a technical team to build it",
-  'Operators spending hours on tasks that AI could handle in minutes',
-  'Growing businesses that need data-driven decisions without hiring a full data team',
+  "Small business owners who want AI but don't have a technical team to build it",
+  'Operators spending hours every week on tasks AI could handle in minutes',
+  'Growing businesses that need clear data without hiring a full analytics team',
 ];
 
 function Consulting() {
@@ -60,13 +44,13 @@ function Consulting() {
       }}
     >
       <div className="title">
-        <h2>Work With Me</h2>
+        <h2>What I Build</h2>
       </div>
 
       <p className="consulting-intro">
-        Whether you need a strategic roadmap, a production-ready AI system, or a team that
-        can actually use AI — I&apos;ve done it. Engagements are scoped to your timeline and
-        budget: advisory, project-based, or ongoing.
+        Every engagement starts with your specific problem — not a template. Whether you need
+        something built from scratch or a clear plan for what to do next, I will scope it to
+        fit your timeline and budget.
       </p>
 
       <div className="consulting-for">
@@ -88,20 +72,10 @@ function Consulting() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
           >
-            <div className="card-icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p className="card-outcome">&rarr; {service.outcome}</p>
             <p>{service.description}</p>
           </motion.div>
-        ))}
-      </div>
-
-      <div className="consulting-process">
-        {steps.map((step) => (
-          <div className="consulting-process-step" key={step.number}>
-            <div className="step-number">{step.number}</div>
-            <div className="step-label">{step.label}</div>
-          </div>
         ))}
       </div>
 

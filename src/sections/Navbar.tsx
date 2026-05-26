@@ -8,8 +8,8 @@ function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
   const sectionLinks = [
-    { name: 'Experience', link: '/#experience' },
-    { name: 'Consulting', link: '/#consulting' },
+    { name: 'Services', link: '/#consulting' },
+    { name: 'About', link: '/#about' },
     { name: 'Contact', link: '/#contact' },
   ];
 
@@ -61,6 +61,7 @@ function Navbar() {
             <div className="logo">
               <Logo animate={false} width="100%" height="100%" />
             </div>
+            <span className="brand-location">Austin, TX</span>
           </Link>
         </motion.div>
         <motion.div
